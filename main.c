@@ -13,7 +13,7 @@
   * Sorties :
   *   longeur : Le nombre de jour dans le mois
   */
-int longeur_mois(int an, int mois)
+int longueur_mois(int an, int mois)
 {
   assert(1 <= mois && mois <= 12);
   return mois == 2 ? an % 4? 28 : 29 : 30 + (((mois * 9) / 8) & 1);
@@ -47,7 +47,7 @@ void ecrire_mois(FILE *fichier, int an, int mois)
 {
   int jour;
   fprintf(fichier, "\t%d :\n", mois);
-  for(jour = 1; jour <= longeur_mois(an, mois); ++jour)
+  for(jour = 1; jour <= longueur_mois(an, mois); ++jour)
     ecrire_jour(fichier, jour, mois);
 }
 
