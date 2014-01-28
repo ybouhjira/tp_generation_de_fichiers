@@ -77,7 +77,7 @@ int main()
   // Lire le nom du fichier
   char nomFichier[100];
   printf("Entrez le nom du fichier : ");
-  scanf("%[^\n]s");
+  scanf("%[^\n]s", nomFichier);
 
   // Ouverture du fichier
   FILE *fichier = fopen(nomFichier, "w+");
